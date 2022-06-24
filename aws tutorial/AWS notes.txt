@@ -1,0 +1,990 @@
+                                                              cloud computing
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. what is cloud computing?
+A:-easy way of retrieval of data or on demand delivery of IT resources over internet remotely with pay as you go pricing.
+-----------------------------------------------------------------------------------------------------------------------------------
+2. Advantage:-
+A:-*no need to plan and procure server
+-----------------------------------------------------------------------------------------------------------------------------------
+3. Types of cloud in cloud computing:-
+*On premise
+managed by us:
+vender:
+*Iaas
+*Paas
+*SaaS
+-----------------------------------------------------------------------------------------------------------------------------------
+4. difference between aws vs  azure vs google engine
+-----------------------------------------------------------------------------------------------------------------------------------
+5. architecture of cloud computing
+-----------------------------------------------------------------------------------------------------------------------------------
+6. Services of cloud computing:
+	Compute service-EC2,ECS
+	Storage service-S3,EBS,EFS
+	Network Service-Route53(Dns)
+	DatabaseService-RDS
+	Domain Service-Directory domain service
+	Monitoring service-Cloudwatch
+	Mobile service-Mobile hub-helps developers build,test,configure and release cloud based applications for mobile devices.
+	Serverless service-Lambda
+	Security service-VPC,aws shield advanced
+-----------------------------------------------------------------------------------------------------------------------------------
+7. Billing
+*/hr-/sec billing for EC@ and several other service[AWS]
+*/sec billing[google engine]
+*/sec billingg[azure]
+-----------------------------------------------------------------------------------------------------------------------------------
+->Aws free tial for 12 months
+-----------------------------------------------------------------------------------------------------------------------------------
+->azure free trial for 12 monthss+40++ services free
+-----------------------------------------------------------------------------------------------------------------------------------
+->Google engine free services for 12 months
+-----------------------------------------------------------------------------------------------------------------------------------
+->Creating account in aws as root user
+-----------------------------------------------------------------------------------------------------------------------------------
+8. Lab session
+   -----------
+----------------------------------------------------------
+1.Billing
+----------------------------------------------------------
+*account name-billing dashboard-bills(every n8 generating)
+Note:delete elastic cloud instances after the use of aws.
+enabling billing
+
+---------------------------------------------------------
+2.Billing alerts
+--------------------------------------------------------- 
+*billing dashboard-billing preferences-receive pdf,usage alerts,billing alerts(mark it)-manage billing alerts-cloudwatch-alarm-billing-create alarm(bottom of pg)-step1(select metrix-billing-totalestimated charge-usd(mark it)-select matrix)-conditions(static,greayter,0.1)-->next
+(step-2 congigure actions-create new topic-enter topic name or it will be default -email:  -creat topic-next)
+(step-3 alarm name:cloudwatch alarm,description(optional):  )-
+(step-4 creat alarm)-directed to billing dashboards------>confirm in the registered mail for sns
+*billing dashboard-alarm-billing[ss]receive
+
+------------------------------------------
+3.Iam user(in search bar)-->global service
+------------------------------------------
+a.creating user
+*acess management->users->create user->username:sameena  ->password(markit)->console password(custom pass:Sameena@9)->next permission->b.creat grp
+b.creating grp
+*(create grp->grp name:Batch97->policy name amazonkinesisreadonlyaccess->(click)create group)-c.add user to grp
+c.add user to grp
+*search grp name in search bar-select-creat user(send email or download pdf to view password and give o user)-notedown url wch is in block->activate MFA(multi factor authentication)->select virtual MFA device 
+unable to creat user when we creat other user and add it
+
+Note down:-
+---------
+url: https://690084340698.signin.aws.amazon.com/console
+username:sameena
+password:Sameena@9
+access key id:AKIA2BLB3MPNJLZ2IZEL
+new password:Sameena@10
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+->  what is cloud computing?
+A:-easy way of retrieval of data or on demand delivery of IT resources over internet remotely with pay as you go pricing.
+->  Advantage:-
+A- *no need to plan and procure server
+   *
+--------------------------------------------------------------------------------------------------------------------------
+->types of cloud in cloud computing:-
+*On premise
+managed by us:
+vender:
+*Iaas
+
+*Paas
+*SaaS
+---------------------------------------------------------------------------
+->difference between aws vs  azure vs google engine
+---------------------------------------------------------------------
+->architecture of cloud computing
+-------------------------------------------------------------------------------
+->Services:Compute service-EC2,ECS
+	Storage service-S3,EBS,EFS
+	Network Service-Route53(Dns)
+	DatabaseService-RDS
+	Domain Service-Directory domain service
+	Monitoring service-Cloudwatch
+	Mobile service-Mobile hub-helps developers build,test,configure and release cloud based applications for mobile devices.
+	Serverless service-Lambda
+	Security service-VPC,aws shield advanced
+----------------------------------------------------------------
+->Billing
+*/hr-/sec billing for EC@ and several other service[AWS]
+*/sec billing[google engine]
+*/sec billingg[azure]
+------------------------------------------------------------------
+->Aws free tial for 12 months
+------------------------------------------------------
+->azure free trial for 12 monthss+40++ services free
+--------------------------------------------------------
+->Google engine free services for 12 months
+---------------------------------------------------------------------------
+->Creating account in aws as root user
+-------------------------------------------------------------------------------------
+->Lab session
+  ------------
+1.Billing
+ ---------
+*name-billing dashboard-bills(every n8 generating)
+Note:delete elastic cloud instances after the use of aws.
+enabling billing
+2.Billing alerts
+  -------------- 
+*billing dashboard-billing preferences-receive pdf,usage alerts,billing alerts(mark it)-manage billing alerts-cloudwatch-alarm-billing-create alarm(bottom of pg)-step1(select metrix-billing-totalestimated charge-usd(mark it)-select matrix)-conditions(static,greayter,0.1)-->next
+(step-2 congigure actions-create new topic-enter topic name or it will be default -email:  -creat topic-next)
+(step-3 alarm name:cloudwatch alarm,description(optional):  )-
+(step-4 creat alarm)-directed to billing dashboards------>confirm in the registered mail for sns
+*billing dashboard-alarm-billing[ss]receive
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.Iam(in search bar)-->global service
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+a.creating user
+*acess management->users->create user->username:sameena  ->password(markit)->console password(custom pass:Sameena@9)->next permission->b.creat grp
+b.creating grp
+*(create grp->grp name:Batch97->policy name amazonkinesisreadonlyaccess->(click)create group)-c.add user to grp
+c.add user to grp
+*search grp name in search bar-select-creat user(send email or download pdf to view password and give o user)-notedown url wch is in block
+unable to creat user when we creat other user and add it
+
+url:( https://690084340698.signin.aws.amazon.com/console) https://690084340698.signin.aws.amazon.com/console
+username:(sameena)Sam
+password:Sameena@9
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8/4/2022
+---------
+
+1.AWS Global Infrastructure
+*aws region
+*available Zone
+*data center
+*Edge locationmist aws
+
+2.Aws Region:all around world,names-us-east-i,us-west
+
+3.Available zone:min2 min6 and 3 types
+
+4.tour of aws console:global service and most aws services
+
+extra:EC2,ECR,ECS,Elastic beanstalk,lambda,Iam,Bucket
+
+5.Iam roles(Identity and access management)
+*global service
+*users, grps, policy
+*root account created by default shouldnot be used or shared
+*users are ppl within organization
+*grps contain user 
+*users dont have to blong  to grp
+
+6. IAM Policy.(done yesterday lab)
+
+7. IAM Permissions
+* users pr grps can be assigned JSON documents called policies
+*These policies define the permission of the users
+*In aws you apply the least privilage principle:dont't give more permission than a user needs.
+eg:-{
+version:
+statement:
+{
+"name"=
+}
+}
+
+
+8.IAm policies inheritence
+
+9.IAM policies structure
+* Consist of version,id,statement
+*Statement :
+
+10.IAM password policy
+*strong password
+*alllow iam users to change pw
+*reusage of the password
+
+11.IAM roles for services
+*Some aws service will need to perform acttions on your brhalf
+*we will assign permission to aws services with iam
+*
+
+12.Guidence and best practice
+*dont use the root account except for aws account setup
+*one physical user=one aws user
+*assign user to grp and assign permission to grps
+*have strong pw
+*use & enforce use of  Mfa
+grps =users+policy
+
+13.Shared Responsibility model for IAM
+a.AWS
+b.You(i)
+
+14. IaM Section(Summary)
+users:mapped to physical user with pw to aws conole
+grp:contains only users
+policies:
+roles::
+security:
+access keys:
+audit:iam credential reports and accesskeys
+
+15.MFA
+*add mfa-activate-select virtual mfa device
+*acess management-users-grp name-summary(permission)
+*Giving key and value while creating new user 
+
+16.EC2 Instance
+a.Ec2 sizing &configuration options
+     os,cpu power &cores,RAM, Storage:N/w attached(EBS & EFs)
+LAB Session
+------------
+1. EC2
+*EC2 dashboard->logging offff:instance(running)=snaphots=low balance=volumes=elastic IPs=0 while logging offf
+a.Creating Instance of Ec2(7 steps)
+step:1 choose ami-windows 2019(free tier)
+step:2 choose instance type(t2 ,12 tier, EBS)
+step:3 config instance details(vpc dashboard-default vpc,subnets is auto created )
+	netwrk:defaullt  ,subnet: default ,auto-assign public ip: enable(rdp acess frm internet),
+step:4 add storage 
+       delete on terminate(tick it),size=30,volume type:general purpose ssd
+step:5 add atgs
+       key:name,value: bh97 public
+Step:6 congig security grp
+	type= http,all traffic, port no.=0.0.0.0/0
+step:7 create new key pair:rsa,bh97,download file- launch instance
+
+vpc=your vpc-def vpc-enable it (if you dont find Public DNS name for EC2 instance - Check VPC - Actions - DNS Hostname)
+instances:2/2check result
+
+put tick mark for instance-to get instance-connect instance-
+
+actions-troubleshoot-get instance ss-status check(2/2check  pass) we should get it-connect
+RDp client-doenload file -get pw-browse -copy pw-connect-put pw -goto IE-ggogle.com=add-add-(check browsing anything)
+to terminate- start  windows security-terminate-instance state
+
+
+-----------------------------------------------------------------------------
+Theory
+-----------------------------------------------------------------------------
+1.Ec2 instance types-compute optimized
+2.Ec2 instance types-memory optimized
+3.Ec2 instance types-storage optimized
+
+note:if instance not connecting then go to ssh troubleshooy and read troubleshooting guide and try ec2 instance connect
+
+-------------------------------------------------------------------------------------------------------------------------------------
+12/4/2022
+-------------------------------------------------------------------------------------------------------------------------------------
+
+1. EC2 section
+* on demand: short workload,predictable pricicng
+*Reserved:long work load,min 1yr and max 3yr,convertible reserved instances with lonf workload with flexible instances,scheduled reserved instance :by scheduling tym
+*spot instance:short workloads,cheap,can lose instance
+*Dedicated hosts: book it only for us not for others,book an entire physical server,control instance placement
+*Dedicated hosts:no other customers will share your hardware
+eg:m4.large-us-east-I
+*on demand:$0.10
+
+summary
+*AMI(OS)+instance size(CPU+RAM)+storage+security grps+EC@ User data
+*firewall attached to the ec2 instance
+*EC2 user data:scPurchasing options:on-demand,spot,reserved(standard +convertible+scheduledript launched at the first start of an instance
+*SSH:start a terminal into our EC2 instance(port 22)
+*EC2 instance role:link to IAM user
+
+-------------------------------------------------------------------
+2.EC2 Hibernate
+*wk we can stop,terminate instance
+ a.stop:data on disk(EBS) is kept intact in nect start
+ b.terminate:any EBS volumes(root) also set-up to be destroyed is lost
+
+3.EC2 vCPU
+
+4.placement grps
+*cluster-cluster instances into a low ltency grp in a single available zone
+*spread-spreads under undelaying hardware
+*partition
+ 
+5.Elastic netwrk interface
+*logical component in a vpc 
+*attributes
+
+6.vpc
+*CIDR-IPv4
+a.classes inter-Domain routing- a metod
+*public vs private IP(IPV4):private ip can allow only certain values
+
+7.Default vpc walkthrough
+*all new aws accounts have default vpc
+*new ec2 instance are launched into default vpc if no subnet is specified
+*default vpc has interbet connectivity and all ec2 instances inside it have public ipv4 address
+*we also get a public default vpc
+
+8.CIDR-IPv4
+*2 components
+a.Base Ip
+b.Subnet Mask:192.168.0.0/(0-32)   [32-{0-36}=no of ips]
+/0 allows for all IPS   -------->0.0.0.0-255.255.255.255
+/16 allows for 65536(2^16)------->192.168.0.0-192.168.255.255
+/32 allows 1 ip(2^0)------------->192.168.0.0  //no octat can change
+
+as number increases,the ip usage decreases
+============================================
+
+192.168.0.0/16
+
+32-16=16
+
+2^16=65536/256=256
+
+172.16.0.0-172.16.0.255-->256
+172.16.1.0-172.16.1.255-->256
+172.16.2.0-172.16.2.255-->256
+
+
+-----------------------------
+192.168.0.0/24
+
+32-24=8
+2^8=256 ips
+
+172.16.0.0------172.16.0.255(256 ips)
+---------------------------------------
+
+192.168.0.0/20
+
+32-20=12
+2^12=4096/256=16
+
+192.168.0.0-192.168.0.255(256 ips)
+192.168.1.0-192.168.1.255(256 ips)
+.
+.
+.
+.
+192.168.16.0-192.168.16.255(256 ips)
+
+------------------------------------------------
+Note:octets
+*/32- no octet can change
+/24 last octet can change
+/16 last 2 octet can change  
+/8  last 3octet will  change
+/0  all octet will change
+====================================================
+Internet gateway:allows resources in a vpc connect to the internet
+*it scales horizontally and is highly available and reduntant
+*must be craeted separately from a vpc
+*one vpc can only be attached to one IGW and vice verasa
+
+*internet gateways on their own does not connect to internet
+
+
+
+
+----------------------------------------------------------
+Lab session
+-----------
+
+1.create vpc
+create igw ,detach it and map to route table
+
+1.creat vpc
+*vpc>> cidr 172.16.0.0/16-65536
+a. sn1: 172.16.0.0/24(public)
+your vpc-name: ,ipv4cidr:172.16.0.0/16-creat vpc-enable dns hostname
+ipv4
+
+b.sn2(private sn):172.16.1.0/24(private)
+your vpc-sn name:  , 
+creat subnet-vpc id-bh97public subnet-no preference-sn1
+
+2.creat internet gateway
+*create igw-name:  ,actions-attach to vpc ,map to public route table(defaiult created-just  name it)
+*IGW to PUB ROUTE->route-edit route -add route
+
+3.create private rt
+*creat route table-name: -choose yor vpc -complete it
+
+4.pubsn(172.16.0.0/24)--->pubrt(subnet association ))
+  privatesn(172.16.1.0/24)---->privatert(subnet association
+
+5.Ec2 instance in pubsn(auto assign ip enabled)
+           igw mapped and dns is enabled
+  EC2 instance in private sn(auto assign IP disabled)
+
+6.create public instance and launch it(enable auto assign)
+*step 3: n/w vpc,subnet -select public subnet wch is created
+
+7:create instance on private subnet (disable auto assign)
+*private ip copy it  
+
+8.launch the public machine with google page open-to connect private(in public machine choose remote desktop connection-paste private ip-copy pw)  
+====================================================================================
+imp:-
+====================================================================================
+1) VPC >> CIDR 172.16.0.0/16 - 65536 ( enable Hostname)
+
+
+
+2)Public SN1 : 172.16.0.0/24 - 256 iP
+  Priv SN2 - 172.16.1.0/24
+
+
+
+3) Create IGW >> Map to VPC and Map to PUB RT ( Public RT is created by default- name it)
+IGW to PUB RT >> Routes - Edit Route and map it
+
+
+
+4) create PRIV RT ( name it)
+
+
+
+5) PubSN (172.16.0.0/24 ) ----> PubRT (Subnet Associations)
+PrivSN (172.16.1.0/24) ----> PrivRT(Subnet Associations)
+
+
+
+6) Ec2 instance in PUBSN ( Auto Assign IP enabled),
+IGW mapped & DNS Hostname enabled
+
+
+
+Ec2 Instance in PrivSN ( Auto assign Ip disabled)
+
+
+
+7) access Public Ec2 instance ( using Connect option) --> internet work here
+
+
+
+Access Priv Ec2 from Public Ec2 ( Remote Desktop Conn) --> Priv Ip ( No internet)
+
+
+
+8) Screenshot of Point 7 - required
+
+-----------------------
+
+if next SN
+SN2 : 172.16.17.0/24
+SN3 : 172.16.18.0/24
+================================================================================================
+
+NAT GATEWAY
+-----------
+
+1.create a nat gateway (pub subnet) and map it to private route table under routes
+2.per hour for usage cost 4RS and bandwidth
+3.NATGW is created in a specific availability zone,uses an elastic IP
+4.Cant be used by EC2 instance in the same subnet(only from other subnets)
+5.requires igw
+
+==================================================================================================================================================================
+
+=>Peering of 2 different regions VPC(communication b/w 2 diff nw)
+Peering of 2 diff Regions VPC
+-----------------------------------------------------------------------------------
+1) VPC#01 – N.Virginia 172.16.0.0/16 CIDR
+Public SN – 172.16.0.0/20 , ADD IGW to VPC and Public RT ( RDP from internet)
+PubRt ---->>> Public SN
+VPC DNS Hostname - Enabled
+
+
+Create 1 Ec2 in Public SN ( Auto Assign IP enabled)
+
+
+2) VPC #02 – Ohio 192.168.0.0/16
+Priv SN – 192.168.0.0/24 , 1 EC2 instance, Priv RT associated to Priv SN
+
+
+Create Priv Ec2 instance ( Auto Assign IP disabled)
+
+
+3) Peering connection :
+
+
+Go to Primary VPC location ( Nv) – Peering conn: Name : Nv_Ohio Peer
+
+
+Select local VPC to peer with : < Ohio VPC ID > & CIDR : 192.168.0.0/16
+Select another VPC to peer : My account , Another region,
+VPC ID : < Acceptor /Ohio> , VPC ID : < NV>
+NV – Peering should be accepted
+
+
+RT : ( NV Pub RT) – ROUTES - Add SN of Ohio 192.168.0.0/24 -- PEER CONN ID
+RT: ( Ohio Priv RT) – Add SN of NV 172.16.0.0/20-- PEER CONN ID
+
+Check RDP of Priv Ec2 ( ohio) from public Ec2( NV) . Internet will be accessible.
+
+Req CIDR 172.16.0.0/20 ( Pub Sn) vpc-04c2fa185aa1932ae / BH97VPC >3.86.100.234/172.16.0.203
+Acceptor CIDR 192.168.0.0/24 ( Priv Sn) vpc-0268894f298281b27 >>192.168.0.8
+
+=======================================================================================================================================================================
+12/4/2022
+=======================================================================================================================================================================
+1. AMI MACHINE 
+*should have ami backbackup,when changes are made to existing product
+
+========================================================================================================================================================================
+Creating aAMI machine {TAKE AMI IMG(charges 3days and 7 days will be tym given)}
+========================================================================================================================================================================
+s:0 Create VPC with IGW connected and add route table
+s:1 Launch an EC2 Instance(stop this machine-assume not wrkg)
+s:2 Taking Snapshots:- actions-img & template-CEATE IMG
+s:3 goto->AMIs(refresh)-launch instance(first step is skipped)-tag name=AMI machine-(if we try to launch this we will get error as password is missing) to fix existing error-
+    copy volume ID and stop the machine
+    vol-0e753781f5f8db134
+     /dev/sda1
+s:4 create another instance in same region and same zone with rescuetool tag name.-connect-download file-get password-browse-copy password 
+
+s:5 go to volumes-ami volume select-detach the volume-attach to rescue tool instance
+    note:- in instance check rescuetool has 2 volumes
+
+s:6 connect rescuetool machine-get password and open the server
+    link-Download & install EC2 Rescue tool  ( https://s3.amazonaws.com/ec2rescue/windows/EC2Rescue_latest.zip ) , run the tool and repair offline Volume( xvfa) 
+    add link in the ie web server-extract zip-orange:
+    diagnoise and rescue-reset administrator pw-next-reset administartor password-next-rescue-next-finish-ok
+    shut down the machine
+s:7 ami-primary machine
+    rescuetool-secondary machine
+    volumes-rescue-detach volume and attach the volume to  ami and change name
+------------------------------------------------------------------------------
+Conclusion: making AmI image to work
+
+===========================================================================================================================
+
+2. AWS SYSTEM MANAGER
+   ~~~~~~~~~~~~~~~~~~
+->Install ssm agent (ec2 Instance)-by adding IAM role for SSM to respective EC2 instance(action-security-modify IAM role)
+->create IAM role-roles-creat role-step 1: aws service ;ec2,s2:amazonec2rolesforssm & amazonssfullfor ssm-create role.
+->map the role-actions in instance -modify the role
+
+========================================================================================================================================================================
+SSM ( SYSTEM MGR) Agent LAB SESSION
+========================================================================================================================================================================
+•For Any EC2 instance to appear in SSM console -
+•1) Create IAM - role for SSM for Ec2 instance
+•2) Install SSM agent ( Ec2 instance) - by Adding IAM Role for SSM to respective EC2 instance ( Action - Security - modify IAM role) .
+•AmazonEC2RoleforSSM
+•AmazonSSMFullAccess
+•3) Login ec2 instance connect it and check : if installed
+    C:\programfiles\Amazon\SSM - Amazon SSM Agent
+•4) Restart SSM Service
+•5) it will Appear in SSM - Node mgmt - Fleet management
+•6) Fetch Inventory details
+---------------------------------------------------------------------------------------------------------
+•Task - 1)Create Ec2 - with Public access( IGW)
+•Task 2) Add SSM role to EC2 & Restart SSM Service ,, it should get registered in SSM console( fleet mgr)
+•task 3)Fetching Inventory details of EC2 via SSM Inventory
+
+SETUP INVENTORY
+SSM > Node mgmt > Inventory> Setup Inventory > Applications
+=======================================================================================================================================================================
+13/4/2022
+========================================================================================================================================================================
+1. Amazon S3
+*It allows people to store obj(files) in buckets(directories)
+*globally unique and should use lowercase
+*obj have key
+*key full path-bucket name/file name
+*obj values are the content of the body-max obj size=5TB(5000GB),>5GB use multi part upload
+*meadata(list of text key/value pairs-system or user metadata)
+*unicode(unique key)
+2.JSON POLICIES
+3.USE S3 bucket
+4.S3 storage class
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+LAB SESSION
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Create bucket-amazon s3-bucket-creat bucket
+2. from created bucket-upload any file
+
+3. S3-Versioning
+* upload html or any file
+* enable versioning(bucket level)(properties-vesioning-enable-create changrs),(enable- show version) =null version id
+* add same file(obj-upload)(view S3>>bucket>>versioning) version id generated
+
+4.S3 encryption
+*amazon s3-bucket-(  )-properties-encry-edit- enable buctket encrytption
+*upload .docx file-upload it
+
+5.lifecycle management
+*mybug61(bucket)-management-create a life cycle-lifecycle rule name:MyRule ,Prefix: MyRule, key & value: MyRule, lifecycle rule actions:(tick)move current versions of obj b/w storage classes,Transition current version of obj:standard-IA(30);Intellligent-Tiering(60);Glacier flexible retrieval(formerly)(90)
+
+6.object lock(enable object lock after creating bucket)
+*create bucket(region,object lock:enable by default versioning is enabled-ceat bucket) 
+
+=======================================================================================================================================================================
+S3 STORAGE(imp)
+=======================================================================================================================================================================
+LAB Scenarios
+
+1)Create Bucket
+
+2)Upload Object
+
+3)S3 versioning
+
+4)S3 Encryption
+
+5)S3 security & policies 
+
+6)Life Cycle mgmt.  
+
+7) Object lock- Retain file for governance ( can be deleted by root ) & Compliance(cant be deleted within retention period even with root )
+
+8) How to Allow Public Access to an Amazon S3 Bucket
+
+9) Hosting Static website using S3 object & Bucket
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+S3 – Static website Hosting
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•1) Create Bucket
+
+•2)upload object/ files required for website ( index.html & Error.html)
+
+•3)enable Public access for bucket – Unblock public, Policy ,  ( ACL – enable)
+ edit bucket policy-remove-policy generator-s1:s3bucket policy,s2:effect->allow;principal->*;actions->putobject;ARM-
+>copy bucket arm id/*;add statement->condition:stringequals;key-server side encryption;value-true->add statement,s3:generate policy(copy json policy ad paste it in window)
+
+•4) enable static website hosting ( obj – properties) , upload Index and error document
+
+========================================================================================================================================================================
+14/4/2022
+========================================================================================================================================================================
+
+1.EBS volume
+*Delete on termination-(In production remove tick mark on delete on termination)
+*free tier:30gb available> than will be charged
+*EBS snapshot:make backup of your ebs at any pt of time
+            ->move vol to diff location->take snapshot and restore to other zone
+            ->ami is an snapshot of Os
+*Volume Types:general purposegp2/gp3(SSD),io1/io2(ssd),sc1(hdd),st1(hdd)
+*EBS encryption:create EBS snaapshot of vol,encrypt using copy(lab part)
+
+2.Lambda
+*to stop the production after 6 we can use lamda by giving condition of start and stop the production
+*adv:-cost durig execution tym,virtual func:no servers to manage;scaling in automated;run on demand
+*pay per request and compute tym(1million request-$0.12)
+*aws lambda limits to per region:deployment size is 50MB
+*supports some programimng language
+
+3.ELB->vertible scalability & horizontal scalability:(scalability-handling more loads)
+*ELB->high availability
+*load balancing
+*Elastic load balance
+*classic and application load balance
+
+4. Load balancer security group
+
+5.classic load balancer
+
+========================================================================================================================================================================
+LOAD  BALANCER  LAB SESSION
+========================================================================================================================================================================
+a. create ubuntu EC2 instance 
+step:1 Choose ami machine image
+	Ubuntu Server 20.04 LTS (HVM), SSD Volume Type 
+step:2 Choose an Instance Type
+	free tier
+step:3 Config instance
+	N/w:defVPC(custom vpc), Subnet:no preference(custom sn), auto-assign public IP:enable
+step:4 Add storage
+	default
+step:5 add tags
+	key:name,value:name of instance(clb1)
+step:6 configure security grp
+	all traffic,ssh,http
+step:7 review and launch
+	select key pair
+step:8 view instance
+                                         ------------------------------------------------------------
+                                                           after 2/2 check pass
+                                         -------------------------------------------------------------
+step:9 select instance and connect it
+step:10 Install apache by connecting instance 
+
+	//enter below commands in ubuntu window
+	Sudo su 
+	sudo apt-get update -y 
+	sudo apt-get install apache2 -y 
+
+ step:11 check if it is able to access via Public IP  
+
+
+b. create linux ec2 instance
+step:1 Choose ami machine image
+	Amazon Linux 2 AMI (HVM) - Kernel 5.10, SSD Volume Type
+step:2 Choose an Instance Type
+	free tier
+step:3 Config instance
+	N/w:defVPC(custom vpc), Subnet:no preference(custom sn), auto-assign public IP:enable
+step:4 Add storage
+	default
+step:5 add tags
+	key:name,value:name of instance(clb2)
+step:6 configure security grp
+	all traffic,ssh,http
+step:7 review and launch
+	select key pair
+step:8 view instance
+                                            -----------------------------------------------------------
+                                                             after 2/2 check pass
+                                            -----------------------------------------------------------
+step:9 select instance and connect it
+step:10 Install apache by connecting instance 
+
+	//enter below commands in ubuntu window
+	sudo su 
+	yum install httpd -y 
+	systemctl start httpd 
+	systemctl enable httpd 
+	cd /var/www/html 
+	vi index.html 
+	( hit i to insert) ,  
+	<h1> This is my CLB 2 Server </h1> 
+	(hit esc key to come out of insert option)  
+	:wq! ( to save and exit) 
+
+ step:11 check if it is able to access via Public IP in IE 
+
+========================================================================================================================================================================
+========================================================================================================================================================================
+
+1.Load Balancer types
+
+i) Classic Load Balancer
+step1: create 2 ec2 instance(ubuntu,linux)
+step2: create load balancer-choose classic load balancer
+	s1: Define load balancer
+		load balancer name:load1; creat LB inside:my def VPC( ); 
+	s2: Assign Security Groups
+		choose existing one
+	s3: configure security setting
+		default
+	s4: configyre health check
+		default
+	s5: add EC2 instance
+		select both the created instances
+	s6: add tags
+		Key:name value:CLBsam
+	s7:Review and create
+-------------------------------------------------------------------------------
+select load balancer and check both the instances should be in "Inservice"
+-------------------------------------------------------------------------------
+step3: copy DNS Name in load balancer and paste in web server. 
+	Check whether it is swifting between 2 web pages on refreshing.
+====================================================================================
+
+ii)Application Load balancer
+
+a. 2 instances-IP(clb 1st &2nd instance)----->First Target Group
+b. 2 instances-IPorDNS/shopping         ----->Second target Group
+
+Step1: First 2 instances are already created for CLB. Use those instances.
+Step2: Create another 2 instances(Linux Based) 
+	step3:select instance=2 and 
+	step6:config security grp select RDP
+      	_____________________________________________________________
+	|           check whether both instances are wrkg            |      
+	|connect the instances and install apache and test them      |
+	|							     |
+	|	//enter below commands in linux window		     |
+	|sudo su 						     |
+	|yum install httpd -y 					     |
+	|systemctl start httpd 					     |
+	|systemctl enable httpd 				     |
+	|cd /var/www/html 					     |
+	|vi index.html 						     |
+	|( hit i to insert) ,  					     |
+	|<h1> This is my CLB 2 Server </h1> 			     |
+	|(hit esc key to come out of insert option)   		     |
+	|:wq! ( to save and exit) 				     |
+	|____________________________________________________________|
+
+Step3:  Create Target grp(TG1)
+	s1:Basic config
+		Instance,target name:      ,vpc:     
+	s2:select clb1 & clb2 instace
+Step4:  Create Target grp(TG2)
+	s1:Basic config
+		Instance,target name:      ,vpc:     
+	s2:select alb3 & alb4 instace
+step5: Create Load balancer-select application load balancer
+	basic config:load balancer name=
+	Networking:VPC & mappings(all zone)
+	security groups:select security grp
+	Liseners and routing: target1
+	CREATE LB
+step6: Select the created load balancer - goto Listners-view/edit-click on + icon-insert rule
+	add condition-path -value:/shopping*-choose target2
+step7: Check target grp in targets column whether machine are "healthy"
+step8: 3rd EC2 instance-connect-(Enter below commands)
+
+	sudo su
+	cd /var/www/html
+	mkdir shopping
+	cd shopping
+	vi index.html
+	(enter i)
+	<h1> Shopping 3</h1>
+	save and exit
+	:wq!
+
+	To check working enter in webpage Public ip(  )/shopping
+
+step9: 4th EC2 instance-connect-(Enter below commands)
+
+	sudo su
+	cd /var/www/html
+	mkdir shopping
+	cd shopping
+	vi index.html
+	(enter i)
+	<h1> Shopping 4</h1>
+	save and exit
+	:wq!
+
+	To check working enter in webpage Public ip(  )/shopping
+
+step10: GoTo load balancer-copy public DNS-refresh and check it wheter switvhing to 1 & 2 and then enter /shopping -it should switch betweenShopping 3 & 4
+
+========================================================================================================================================================================
+5. AUTO SCALING GROUP
+========================================================================================================================================================================
+
+1) Launch instance(linux - PUBlic , IGW mapped to VPC & pub RT ) > Create Image as AUTOSCALINGGROUP depends on EC2 / Images to scale up
+
+skip 2) Create Load Balancer ( CLB here) ( EC2 / Skip & add Image later) , CHOOSE TCP port 80
+skip 3) Create target group ( CHOOSE TCP port 80 )
+
+
+4) Launch Configuration
+Choose AMI image < Linux AMI that was created from Linux instance ami-03ededff12e34e59e >
+Instance Type - t2 micro
+Choose Security group ( created for Load balance)
+Choose Existing key pair
+
+
+
+5) ASG - auto scaling group ( POLICY for CPU >80 add 2- 3 )
+Choose Name
+Choose LAUNCH Configuration ( not template) - pick previously created launch configuration details . step 4
+VPU - Auto Populated
+SN - Choose any SN
+
+Group size : Desired Capacity 2, Minimum - 1, Maximum - 4
+Scaling Policies - CPU > 50 Instance need - 300Sec ( 5 min)
+Skip Notification
+Create ASG
+
+6) 2 autoscale instance are generated connect it and enter below commands
+
+sudo su
+top ( What process are running ) --: idle value ( 100.0 id- 100% idle)
+Control + C
+
+to spike CPU in Linux instance -
+
+yes > /dev/null &
+
+to kill cpu usage -
+
+killall yes
+------------------------------------------------------------------------------------------------------------
+Desired - 2
+min - 1
+max 5
+
+=============================================================================================================================================================================
+Deployment
+=================================================================================================
+->store mysql database into s3 buccket in the form of file
+->
+
+=======================================================================================================================================
+18/4/2022
+=======================================================================================================================================
+
+1. Encryptionn
+*create linux instance
+*Goto volumes-take a copy of snapshot frm volume
+*Goto snapshots-check status(completed)
+*create vol from the snapshot-(changing zone)Encrypt the volume[tick]-create volume
+*detach vol from previous vol and attach to new volume.
+
+
+2.lambda fuction
+* copy the instance id of running instance.
+*iam-roles-create a role
+	step1: aws truted entity,lambda
+	step2: create policy-select json-paste below structure
+		{
+  			"Version": "2012-10-17",
+ 			 "Statement": [
+   			 {
+      			"Effect": "Allow",
+                        "Action": [
+                        "logs:CreateLogGroup",
+                        "logs:CreateLogStream",
+                        "logs:PutLogEvents"
+                          ],
+                        "Resource": "arn:aws:logs:*:*:*"
+                        },
+                       {
+                       "Effect": "Allow",
+                       "Action": [
+                                  "ec2:Start*",
+                                  "ec2:Stop*"
+                                 ],
+                         "Resource": "*"
+                        }
+                      ]
+                   }
+		------------------------------------------------------------------
+		step1: policyname,description(Lambda_start_stop_ec2)-create policy
+
+	Step3:select created policy-Name,Review and create it.
+
+*Goto Lambda
+	Create Lambda functions that stop and start your EC2 instances
+1.    In the AWS Lambda console, choose Create function.
+
+2.    Choose Author from scratch.
+
+3.    Under Basic information, add the following:
+For Function name, enter a name that identifies it as the function used to stop your EC2 instances. For example, "StopEC2Instances".
+For Runtime, choose Python 3.9.
+Under Permissions, expand Change default execution role.
+Under Execution role, choose Use an existing role.
+Under Existing role, choose the IAM role that you created.
+
+4.    Choose Create function.
+
+5.    Under Code, Code source, copy and paste the following code into the editor pane in the code editor ( lambda_function). This code stops the EC2 instances that you identify.
+       import boto3
+       region = 'us-east-1c'
+	instances = ['i-0f5b15aec0342a369']
+	ec2 = boto3.client('ec2', region_name=region)
+
+	def lambda_handler(event, context):
+    ec2.stop_instances(InstanceIds=instances)
+    print('stopped your instances: ' + str(instances))
+   -------------------------------------------------------------
+
+import boto3
+region = 'us-east-1'
+instances = ['i-0f5b15aec0342a369']
+ec2 = boto3.client('ec2', region_name=region)
+
+def lambda_handler(event, context):
+    ec2.start_instances(InstanceIds=instances)
+    print('started your instances: ' + str(instances))  
