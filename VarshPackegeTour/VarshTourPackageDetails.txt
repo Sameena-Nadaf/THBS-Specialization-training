@@ -1,0 +1,5 @@
+989/CHM,Chennai,Mumbai,3000,15
+201/DEC,Delhi,Chennai,4000,9
+805/JAG,Jaipur,Goa,7500,5
+301/AGD,Agra,Delhi,1333,7
+215/KOM,Kochi,Mumbai,5555,5
