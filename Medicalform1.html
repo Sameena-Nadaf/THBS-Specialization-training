@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Patient Registration Forms</title>
+</head>
+<body>
+
+<h1 style="text-align:center">Patient Registration Form</h1>
+<p><b>_________________________________________________________________________________________________________________________________________________________________<b/></p>
+<br>
+<br>
+Patient details:
+<p><b>_________________________________________________________________________________________________________________________________________________________________<b/></p>
+Patient Name
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname">
+  <label for="mname">Middle name:</label>
+  <input type="text" id="mname" name="mname">
+   <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br> 
+</form>
+
+Phone No.:
+<input type="tel" name="Phone Number"  pattern="[0-9]{10}" required>&nbsp
+Alternate Phone No.:
+<input type="tel" name="alternate Phone Number"  pattern="[0-9]{10}" required>
+<br>
+<br>
+
+E-mail Id:
+<input type="text" name="E-mail Id" >
+<br>
+<br>
+
+<label for="Address">Address:&nbsp&nbsp</label>
+<input type="text" name="Address">
+City:<input type="text" name="City" >
+State:<input type="text" name="State">
+Pin code:<input type="tel" name="Pin code">
+<br>
+<br>
+
+Date Of Birth:
+<input type="tel" name="Date Of Birth"  pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}" required>
+Age:
+<input type="tel" name="Age"  pattern="[0-9]{2}" required>
+
+<label for="gender"> Gender</label>
+<input type="radio" id="gender" name="gender" value="male">Male
+<input type="radio" id="gender" name="gender" value="female">Female
+<br>
+<br>
+<form>
+Matrial Status:
+<select name="Matrial Status" id="Matrial Status">
+<option value="Single"> single</option> 
+<option value="Married"> married</option>
+<option value="Divorced"> divorsed</option> 
+<option value="Widowed"> widowed</option> </select>
+<br>
+<br>
+<br>
+<b>Emergency Details:</b>
+<p><b>___________________________________________________________________________________________________________________________________________________________</b></p>
+
+  <label for="Emergency contact Name">Emergency contact Name:</label><br>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname">
+  <label for="mname">Middle name:</label>
+  <input type="text" id="mname" name="mname">
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname">
+  <br>
+  <br>
+
+ Relationship:
+<select name="Relationship" id="RelationShip">
+<option value="father"> Father</option> 
+<option value="mother"> Mother</option>
+<option value="brother"> Brother</option> 
+<option value="sister"> Sister</option>
+<option value="guardian"> Guardian</option>  </select>
+<br>
+<br>
+
+Contact No.:
+<input type="tel" name="Contact Number"  pattern="[0-9]{10}" required>&nbsp
+<br>
+<br>
+<b>Hospital Details:</label>
+<p>__________________________________________________________________________________________________________________________________________________________________</p>
+ <label for="hname"><h4>Hospital Name:</h4></label>
+ <input type="text" id="hname" name="hname">
+<br>
+<br>
+<label for="Hospital Address">Hospital Address:</label>
+<br>
+<input type="text" name="Address">
+
+City:<input type="text" name="City" >
+
+State:<input type="text" name="State">
+Pin code:<input type="tel" name="Pin code">
+<br>
+<br>
+Phone No.:
+<input type="tel" name="Contact Number"  pattern="[0-9]{10}" required>&nbsp
+<br>
+<br>
+Registration Id:
+<input type="tel" name="Registration Number"  pattern="[0-9]{10}[A-Z][a-z]" required>&nbsp
+<br>
+<br>
+Registration Date :
+<form >
+ 
+  <input type="date" id="Registration date" name="registration date">
+  <input type="submit">
+</form>
+
+<br>
+<br>
+<b>Family Doctor Details:</b>
+<p>__________________________________________________________________________________________________________________________________________________________________</p>
+<label for="Name">Doctor Name:</label>
+<input type="text" id="dname" name="dname">
+<br>
+<br>
+<label for="Phone no">Phone Number:</label>
+<input type="tel" name="Phone Number"  pattern="[0-9]{10}" required>&nbsp
+<br>
+<br>
+<p>Reason For Registration</p>
+<input type="text" id="Registration reason" name="Registration reason">
+<br>
+<br>
+<label for="Taking any medications,currently?">Taking any medications,currently? </label>
+<input type="radio" id="Taking any medications,currently?" name="Taking any medications,currently?" value="Yes">Yes
+<input type="radio" id="Taking any medications,currently?" name="Taking any medications,currently?" value="No">No
+<br>
+<br>
+
+
+<p>If yes, please list it here</p>
+<input type="text" id="tablets list" name="tablets list">
+<br>
+
+<input type="submit" style="text-align:center">
+
+
+</body>
+</html>
