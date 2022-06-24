@@ -1,0 +1,29 @@
+								JENKINS
+								=======
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.Why Jenkins?
+2.what is Jecnkins?
+3.Continuous Integration
+4.Features of Jenkins
+5.Jenkins Pipelines
+6.Jenkins architecture
+
+---------------------------------
+Lab Session
+---------------------------------
+1.Download jenkins for windows
+2.Port no: By default, your Jenkins runs at https://localhost:8080/. This can be changed by editing jenkins.xml , which is located in your installation directory.
+3.Starting/stopping the service : 
+Jenkins is installed as a Windows service, and it is configured to start automatically upon boot. To start/stop them manually, use the service manager from the control panel, or the sc command line tool.
+4.
+
+
+======================================================================================================
+5/3/2022
+=======================================================================================================
+					yaml
+->Indectuction and separation 2 main concepts
+->
+
+
