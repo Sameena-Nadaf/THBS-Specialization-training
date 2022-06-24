@@ -1,0 +1,186 @@
+							KAFKA(AHMED)
+							`````
+
+1. * Kafka is publish subscribe based fault tolerate system 
+ IOT devices<---->cloud
+		MQTT(Messaging Queue telemely transport)->Publish subscribe
+							 (sender) (Receiver)
+
+*It is fast scalable
+*its distributed by design
+
+2. kafka is writen in 
+
+3. The problem-handling enormous data
+*how to collect enourmous amount of data ?
+*how to handle or analyse enormous amount of data?
+
+solution :messaging system.
+
+4. Messaging system:
+
+5.types of messaging system
+*point to point(TV)
+*pub sub
+
+6.Kafka:Kafka is publish subscribe
+
+7.Benefits of kafka
+*reliability
+*low ltency: handles large amount of data and stores large amt of data with less delay 
+*high throughput: handles large amount of data 
+*scalability: 
+*performanace: good wrkg
+*durability:
+*distributed:
+*default persistent:keepa a copy of data quickly after sending message
+*real time handling
+*consumer friendly
+
+8.Disadvantages of Kafka
+* issues with messaging pardigm  and twesking
+
+9.Use of kafka
+* metrics
+* messaging
+* log aggregration solution
+* stream processing
+
+10.Why we need kafka?
+*helps to have 0 data loss,0 down time, 
+
+11.fundamentals of kafka
+*producers:ty are the one who will public the messages.
+	|
+* topics: stream of messages in 1 category(temperature)
+   |
+*partition:each topic has 1/multiple partition and have messages in sequence of immutatable(no change) data 
+*partition offset: it has own offset.uniqye sequence id
+*replicas of partition:no data loss,backups of partitions
+*Brokers: ty are simple system made ty handle/maintain the publish data and has muliple partition.1 broker-1 topic
+*kafka cluster:any kafka having more than 1 broker
+
+*consumers:receivers are the 
+*leader:every single broker will have 1 leader,responsible for reading and writing the data to consumers. 
+*followers:ty are the one who will follow leaders,leader fails follower will take a initiative.
+
+Note:
+1topic "n"partition 2 broker:1st broker take partition and other will not take partition
+3topic and 1broker :2 partition will have 1 broker unequal size of topic and broker are not recommended (3topics will be shared b/w 2 brokers
+)
+12. types of kafka API
+*Producer API: publishes a kafka topics
+*consumer API
+*Stream processors:stream API-collecting more than 1 topics to morethan 1 publishers/consumers.
+*Connectors:databases.
+
+13.Kafka architecture
+*zookeper:helps to maintain the states of broker.manage and co ordinate the kafka brokers.track of the new brokers available.
+*kafka producers:publishes the data or pushes the data to the brokers.
+*kafka consumers:how many messages have been consumed.
+=========================================================================================================================================
+LAB SESSION
+=========================================================================================================================================
+
+1.Installing apache kafka
+* https://dlcdn.apache.org/kafka/3.2.0/kafka_2.13-3.2.0.tgz
+* extract the file(2 times)
+* modification to server and zookeper properties(c:/kafka/)
+* run zookeper in the cmd command prompt and in another commd prompt run server of kafka
+	.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+	.\bin\windows\kafka-server-start.bat .\config\server.properties
+--------------------------------------------------------------------------------------------------------------------------------------------
+31/5/2022
+--------------------------------------------------------------------------------------------------------------------------------------------
+1. run zookeper in the cmd command prompt and in another commd prompt run server of kafka
+	.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+	.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+2. creating topic 
+	.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic <<topic_name>>
+	(exception in thread main occured)
+	
+	.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic <<topic_name>>
+
+3. command to return list of topic created
+	.\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092 
+
+4. open a new console and create producer to the already created topic
+	.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic <<demotopic>>(enters into the console of demotopic)
+
+5.creating a consumer for already created topic
+	.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic demotopic<<topic_name:demotopic>> --from-beginning
+
+6.SENDING A MESSAGE FROM CONSUMER TO PRODUCER THROUGH A KEY
+*.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic demotopic --property "key.separator=-" --property "parse.key=true"
+.\bin\windows\kafka-console-consumer.bat --broker-list localhost:9092 --topic demotopic --property "key.separator=-" --property "parse.key=true"
+
+Note:consumer offset->
+
+===================================================================================================================================================
+THEORY
+============================================================================================================================================
+1.consumer grp: 1topic->5 different partition->(produces data with high speed)->1 consumer ->(this consumer create log file)log file->real time processing
+		to over come the log file ,consumer grp picture into picture.
+
+2.case2:1 topic,4 different partition,2 consumer instances[grp id will be same for all instances]
+
+3.case3:1 topic,4 different partition,4 consumer instances[grp id will be same for all instances](wrks more efficent)
+
+4.case4: partition instaces(4),4
+
+---------------------------------------------------------------------------------------------------------------------------------------
+1.
+.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic <<topic name>>
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+1/6/2022
+------------------------------------------------------------------------------------------------------------------------------------------------
+1. creating topic
+.\bin\windows\kafka-topics.bat --create --topic firstopic --bootstrap-server localhost:9092 --replication-factor 3 --partitions
+
+2. to display list of topics
+
+
+
+
+
+5.open anew console
+	.\bin\windows\kafka-topics.bat --describe --bootstrap-server localhost:9092 --topic <<topic name>>
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+case study
+==========
+1. you have a web site trying to serve the purpose of courses,complete vedio tutorials,login s/m,half vedio,guiding to watch vedio
+*Producer:who will add tutorial vedios are producer
+*consumer:the tutorial vedios which we are watching are consumers
+*2topics-user-(watch)vedio-stop vedio afer some time[creates a topic called watched until)
+ resume it from the same time where vedio is stopped
+topic:how can we implement kafka?
+
+
+
+==========================================================================
+netflix( )
+
+*producer(humans) will produce/add a movie into the netflix application
+
+*topic is a category like netflix has many categories like crime movies,horrow movies,crime series,romantic movies,award-winning movies
+-> (Topic is a category in which records are saved and published)
+->kafka keeps records(n no.of watched movies) in the log in this consumers/receivers can watch any movie randomly from the records
+
+*10000 consumers(peoples) can served by single kAFKA broker(account)
+
+*Partitioning(bunch of movies) allows Kafka producers to serialize, compress, and load balance data among brokers. Each msg/vedio in a partition is assigned a sequencial id called offset.
+
+ 
+
+ 
+
+
+
+
+
