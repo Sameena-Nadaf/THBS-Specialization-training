@@ -1,0 +1,132 @@
+20/4/2022							             GIT
+
+1. Introduction to version control systems
+a. Version control system: It allows you to manage a collection of files and gives access to different versions of these files.
+*  Good in trACKING THE Changes in text file
+*  helps developers to manage files 
+
+b. Distributed version control system
+* project in repo already exist---> 5 memebers will pull the skeleton of the code
+
+c.stages of GIT
+*working directory -->staging area--> remote repo
+
+2.Install Git
+
+->To push entire project(senior person do it )(5 members in team clone it)
+goto github-repositories-new repositorite-rest
+cd ..
+cd ..
+cd ..
+pwd
+cd rest2 
+cd registereduser
+pwd
+git init
+git status
+git add .
+git commit -m "initial commit"
+git remote add origin (link in git)
+git push origin master 
+
+====================================================================================================================
+Lab sesssion 
+====================================================================================================================
+1. create folder [C:\Users\sameena_nadaf\Desktop\Devops\Github]
+-> Using cd goto the folder
+    cd .. (it will remove directory in reverse order)
+    cd Users/sameena_nadaf/Desktop/Devops/Github(go to this folder)
+    pwd (used to check present working directory)
+    git version
+    git config --global user.name "Sameena-Nadaf"
+    git config --global user.email "sameenanadaf612000@gmail.com"
+    git config --global --list//display data
+
+2. creating empty repository in local machine
+-> git init folder_name
+
+3. creating text file and pushing into github acccount
+-> echo "Data to be entered">>index.txt(file name)
+-> git status
+-> git init 
+-> git add index.txt
+-> git commit -m "initial commit" (to save the data in local host)
+-> git remote -v (to view the operations of repository)
+   ----------------------------------------------------------------
+        goto github and create new repository
+   -----------------------------------------------------------------
+-> git remote rm origin (removes the current origin)
+-> git remote add origin https://github.com/Sameena-Nadaf/Java.git[current repository link exist in code(green)](connection between local machine and github machine)
+-> git push origin master
+
+4. Editing text file and pushing into the github
+-> git status
+-> git add index.txt
+-> git commit -m "second commit" (to save the data in local host)
+-> git remote -v (to view the operations of repository)
+-> git remote rm origin (removes the current origin)
+-> git remote add origin https://github.com/Sameena-Nadaf/Java.git[current repository link exist in code(green)](connection between local machine and github machine)
+-> git pull origin master
+-> git push origin master
+
+5.To clone(transferring file from github to local machine)
+->goto github -add files- upload a file -commit changes
+->goto git bash and use the below command
+	->git clone https://github.com/Sameena-Nadaf/Java.git
+	---------------------------------------------------------------------------------
+		confirm it in local host whether github repository exist or not 
+	---------------------------------------------------------------------------------
+
+6. To push entire project(Note:- senior person/team leader will push the project and team members(5) in team should clone it)	
+
+
+
+
+
+
+===============================================================================================================================
+21/4/2022
+===============================================================================================================================
+
+1.pdf work
+
+2.git ignore 
+
+3.LAB session
+->goto current wrkg directory
+->git init
+->touch .gitignore or cat .gitignore
+-----------------------------------
+  check local machine 
+-----------------------------------
+->crete folder and insert txt document(.gitignore,welcome.txt,log.log,new folder)
+->git status
+->git add .
+->git remote add origin (link)
+->git push origin master
+-------------------------------------
+created new repository
+-------------------------------------
+git status(previous folder)
+git add .
+git commit -m origin master
+git branch b1
+git checkout b1(switched to branch b1)
+git checkout b1
+git push -u origin b1
+git branch(list all the branches)
+git checkout master
+git branch -d b1(deleting the branch from remote not local)
+git branch
+git push origin --delete b1(deleted from b1 branch from local)
+
+git branch b2(creating branch)
+git push -u origin b2
+git checkout b2
+git checkout master
+git merge b2
+
+
+
+
+
