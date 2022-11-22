@@ -1,0 +1,91 @@
+->https://www.websparrow.org/spring/how-to-build-executable-jar-with-maven-in-spring-boot#:~:text=%20Follow%20the%20below%20steps%20to%20build%20executable,executable%20JAR%2C%20using%20the%20following%20Java...%20More%20
+->https://medium.com/creative-technology-concepts-code/deploy-a-java-spring-boot-application-to-aws-elastic-beanstalk-c65778d62598
+->Amigoscode
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How to Deploy Spring Boot Applications | AWS Elastic Beanstalk | 2019
+master username:admin
+master password:samsush6008
+schema_name:digitalbanking
+tc/ip:3306
+putty username:ec2-user
+
+1. to install java 
+   
+   sudo yum install java-1.8.0-openjdk(java8)
+   sudo amazon-linux-extras install java-openjdk11(java11)
+  
+
+2.access denied error fixing bug 
+3.debugging
+mvn clean install -X
+delete .m2 file
+-r8 clk on project-config build path-order and export
+project-run configuration-expand maven build-jre(alternate jre:jre)-mvn clean verify
+pom.xml
+-------------------------------------------------------------------------------------------------------------------------------------
+<plugin><inherited>true</inherited><groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId></plugin>
+-------------------------------------------------------------------------------------------------------------------------------------
+->system editing
+copied setting.xml of apache and adding to the spring tool (preferenc-maven-user setting- change path)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+->creating Executable jar file
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+whoami
+sudo -i (ec2 instance)
+java -version
+sudo yum install java-1.8.0-openjdk(java8)
+
+============================
+goto s3 bucket-copy jar path
+============================
+
+wget <<jar path>>
+java -jar <<jar name>>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+->My Sql commands
+  ~~~~~~~~~~~~~~~
+sudo su
+yum install mysql(rds-sg(clk on it)-goto inbound -edit-delete previous one and add instance sg there)
+mysql -h onlinebankingdb.c3ftx8r5xonp.us-east-1.rds.amazonaws.com -P 3306 -u sameena -p
+password:_____________
+
+=======================================================================================================================================================================
+java
+~~~
+
+ec2-user@ip-172-31-11-214 ~]$ sudo -i
+[root@ip-172-31-11-214 ~]# sudo yum install java-1.8.0-openjdk
+root@ip-172-31-11-214 ~]# java -version
+root@ip-172-31-11-214 ~]# wget https://onlinebanking-06-01-2000.s3.amazonaws.com/Spring-boot-aws-onlinebanking.jar
+root@ip-172-31-11-214 ~]# ls
+root@ip-172-31-11-214 ~]# java -jar MetroTicketBooking-0.0.1-SNAPSHOT.jar
+
+
+mysql
+~~~~~
+
+[ec2-user@ip-172-31-11-214 ~]$ sudo su
+[root@ip-172-31-11-214 ec2-user]# yum install mysql
+[root@ip-172-31-11-214 ec2-user]# mysql -h mydbinstance1.c3ftx8r5xonp.us-east-1.rds.amazonaws.com -P 3306 -u admin -p
+MySQL [(none)]> create database metro3;
+kill -9 $(lsof -t -i:"Port Number")
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+========================================================================================================================================================================
+=>To kill current wrkg port in putty server
+1. List the processes that are listening on a specific port by typing in the following command and executing it.
+lsof -i:(port number)
+2. In order to terminate any process that is using the port number to communicate, type in the following command and execute it.
+kill $(lsof -t -i:"Port Number")
+3. The above command might not work on high privilege applications, therefore, execute the following command to immediately terminate any process communicating at a specific port.
+kill -9 $(lsof -t -i:"Port Number")
+4. This command will immediately terminate any process communicating through the specified port number.
